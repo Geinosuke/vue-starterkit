@@ -16,15 +16,34 @@
       <li><a href="http://vue-loader.vuejs.org/" target="_blank">vue-loader</a></li>
       <li><a href="https://github.com/vuejs/awesome-vue" target="_blank">awesome-vue</a></li>
     </ul>
+
+    <div v-for="test in tests">
+      <p>
+        <span><b>{{ test.name }}</b></span><br />
+        <span>{{ test.count }}</span>
+      </p>
+    </div>
   </div>
 </template>
 
 <script>
+import services from './services/service'
+
 export default {
   name: 'app',
   data () {
     return {
-      msg: 'Welcome to Your Vue.js App'
+      msg: 'Welcome to Your Vue.js App',
+      tests: []
+    }
+  },
+  mounted () {
+    this.getTestsfromApi()
+  },
+  methods: {
+    async getTestsfromApi () {
+      const response = await services.getTests();
+      this.tests = response.data
     }
   }
 }
