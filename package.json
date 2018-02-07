@@ -23,9 +23,11 @@
     "strong-error-handler": "^2.0.0"
   },
   "devDependencies": {
+    "ava": "^0.25.0",
     "eslint": "^3.17.1",
     "eslint-config-loopback": "^8.0.0",
-    "nsp": "^2.1.0"
+    "nsp": "^2.1.0",
+    "nyc": "^11.4.1"
   },
   "repository": {
     "type": "",
