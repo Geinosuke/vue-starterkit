@@ -42,7 +42,7 @@ export default {
   },
   methods: {
     async getTestsfromApi () {
-      const response = await service.getTests();
+      const response = await services.getTests();
       this.tests = response.data
     }
   }
