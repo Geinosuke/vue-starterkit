@@ -2,14 +2,14 @@
 
 > A Vue.js project
 
+This is the front part of the starterkit. It use [Vue.js](https://vuejs.org)
+Webpack and Bootstrap are already configured
+
 ## Build Setup
 
 ``` bash
 # install dependencies
 npm install
-
-# serve with hot reload at localhost:8080
-npm run dev
 
 # build for production with minification
 npm run build
